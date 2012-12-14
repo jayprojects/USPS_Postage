@@ -152,8 +152,13 @@ public partial class _Default : System.Web.UI.Page
                     XmlNode nSize = doc.CreateElement("Size");
                     nSize.AppendChild(doc.CreateTextNode("REGULAR"));
                     Package.AppendChild(nSize);
+
+                    XmlNode nMachinable = doc.CreateElement("Machinable");
+                    nMachinable.AppendChild(doc.CreateTextNode("true"));
+                    Package.AppendChild(nMachinable);
                 }
 
+               
             }
             RateV4Request.AppendChild(Package);
         }
