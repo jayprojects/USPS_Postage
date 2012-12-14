@@ -11,7 +11,8 @@
     <div>
     
         Service:
-        <asp:DropDownList ID="DropDownListService" runat="server" AutoPostBack="True">
+        <asp:DropDownList ID="DropDownListService" runat="server" AutoPostBack="True" 
+            onselectedindexchanged="DropDownListService_SelectedIndexChanged">
             <asp:ListItem>FIRST CLASS</asp:ListItem>
             <asp:ListItem>PRIORITY</asp:ListItem>
         </asp:DropDownList>
@@ -21,19 +22,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To Zipcode:
         <asp:TextBox ID="TextBoxZipTo" runat="server" Width="58px"></asp:TextBox>
         <br />
-       Shape:
-        <asp:DropDownList ID="DropDownListShape" runat="server" AutoPostBack="True" 
+        Type:
+        <asp:DropDownList ID="DropDownListPackageType" runat="server" AutoPostBack="True" 
             onselectedindexchanged="DropDownListShape_SelectedIndexChanged">
             <asp:ListItem>LETTER</asp:ListItem>
-            <asp:ListItem>PACKAGE</asp:ListItem>
+            <asp:ListItem>PARCEL</asp:ListItem>
         </asp:DropDownList>
-        <br />
-        Size:
-        <asp:DropDownList ID="DropDownListSize" runat="server">
-            <asp:ListItem>REGULAR</asp:ListItem>
-            <asp:ListItem>LARGE</asp:ListItem>
-        </asp:DropDownList>
-        <asp:Panel ID="PanelDimension" runat="server" Visible="False">
+        &nbsp;<asp:Panel ID="PanelDimension" runat="server" Visible="False">
             Width:
             <asp:TextBox ID="TextBoxWidth" runat="server" Width="40px"></asp:TextBox>
             &nbsp;Lenght:
