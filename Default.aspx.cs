@@ -11,7 +11,7 @@ using System.Net;
 
 public partial class _Default : System.Web.UI.Page
 {
-    string uspsUserId = "711JAY000663";
+    string uspsUserId = "USPS Web Tool user ID";//Replace this!
     string Service;
     string ZipOrigination;
     string ZipDestination;
